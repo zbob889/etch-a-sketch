@@ -1,4 +1,11 @@
+const changeCellsButton = document.getElementById('changeCellsButton');
+//changeCellsButton.addEventListener('click', function() {});
+
+
 const grid = document.getElementById('grid');
+//const changeCellNumber = document.getElementByClass('button')
+
+//changeCellNumber.addEventListener('click', )
 
 function createGrid(dimension){
     grid.style.gridTemplateColumns = `repeat(${dimension}, 1fr)`;
@@ -7,7 +14,13 @@ function createGrid(dimension){
     for (let i = 0; i < (dimension * dimension); i++){
         let cell = document.createElement('div');
         cell.className = 'cell';
-        cell.style.color = 'white';
+        cell.style.backgroundColor = 'white';
         grid.appendChild(cell);
     }
+
+    grid.addEventListener('mouseover', function(event) {
+        let cell = event.target;
+        if (cell.classList.contains('cell')) {
+            cell.style.backgroundColor = 'black';}
+    })
 }

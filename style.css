@@ -2,8 +2,9 @@
     display: inline-grid;
     height: 500px;
     width: 500px;
+    border: solid black 1px;
 }
 
 .cell {
-    
+
 }
