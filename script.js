@@ -1,6 +1,14 @@
 const changeCellsButton = document.getElementById('changeCellsButton');
 changeCellsButton.addEventListener('click', function() {
-    let number = window.prompt('How many cells would you like on each side?');
+    let number = window.prompt('How many cells would you like on each side?  The number cannot excede 100.');
+    if (number > 100) {
+        alert('The number cannot excede 100!');
+        return;
+    }
+    if (isNaN(number)){
+        alert('It must be a number!');
+        return;
+    }
     createGrid(number);
 });
 
