@@ -1,11 +1,11 @@
 const changeCellsButton = document.getElementById('changeCellsButton');
-//changeCellsButton.addEventListener('click', function() {});
+changeCellsButton.addEventListener('click', function() {
+    let number = window.prompt('How many cells would you like on each side?');
+    createGrid(number);
+});
 
 
 const grid = document.getElementById('grid');
-//const changeCellNumber = document.getElementByClass('button')
-
-//changeCellNumber.addEventListener('click', )
 
 function createGrid(dimension){
     grid.style.gridTemplateColumns = `repeat(${dimension}, 1fr)`;
